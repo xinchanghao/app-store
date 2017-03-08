@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>appstore-详情</title>
+<link href="static/css/details.css" rel="stylesheet">
+<style type="text/css">
+  #thumbPreviewer {position: fixed;width: 100%;height: 100%;left:0;top:0;z-index: 100;display: none;}
+  #thumbContainer {height: 100%;}
+  .thumb-item{height:100%;}
+  .thumb-item-wp {text-align: center;position: relative;z-index: 2;}
+  .thumb-shadow {background: #000;opacity: .9;position: absolute;left:0;top: 0;width: 100%;height: 100%;z-index: 1;}
+
+  .Box {
+    display:-webkit-box;
+  }
+
+  .Box.is-center {
+    -webkit-box-align:center;
+  }
+  
+  .Box_flex {
+    -webkit-box-flex:1;
+  }
+
+  .Relative {position:relative;}
+  .qstoreAuthorizer {
+    /*position:absolute;*/
+    /*right:10px;bottom:10px;*/
+    color:#999;
+    font-size:14px;
+    /*-webkit-transform:scale(0.9);*/
+    -webkit-transform-origin: center right;
+  }
+  .fixedBar {display:none;}
+  .mainBtn {
+    display:inline-block;
+    background:#19b955;
+    color:#fff;
+    text-align:center;
+    padding:.5em 1.5em;
+  }
+
+  .downloadModule {
+    padding:10px 8px;
+    background:#fff;
+  }
+
+  .downloadModule .app-item {
+    float:right;
+  }
+</style>
+</head>
+<body>
+    <div id="warpper">
+    	<script type="text/template" id="app_item_template">
+<li data-href="/detail/index?pname={{apkid}}&id={{id}}" class="app-item">
+   <div class="list-img"><img src="{{logo_url}}" alt=""></div>
+   <div class="list-cont">
+        <div class="lt-c-tit"><h2><a href="#nogo">{{name}}</a></h2><span>{{size_fixed}}MB</span></div>
+        <div class="lt-c-s-n"><div class="lt-c-s-n-l"><div class="star"><p style="width: {{rating_fixed}}%;"></p></div></div>
+        <span>{{download_times_fixed}}下载</span></div>
+   </div>
+   <div class="btns"><a class="dl-btn js-downloadBtn" href="{{down_url}}"><span></span>下载</a></div>
+</li>
+</script>
+<style type="text/css">
+#newsapp .close{width: 1rem;height: 1rem;border-radius: 50%;background: #3f3f3f;display: block;position: absolute;left: .3rem;top: .3rem;}
+#newsapp .close:after{content:'×';position: absolute;top: 0;left: 0;color: #666;font-size: 1rem;line-height: 1;width: 100%;text-align: center;}
+#newsapp{padding: 5%;background: #545454;display: -webkit-box;position: relative;}
+#newsapp p{color:#fff;}
+#newsapp img{margin:0 1rem;width: 36px;height: 36px;display: block;box-shadow: 0px 2px 5px #000;}
+#newsapp .adbtn{background-image: -webkit-linear-gradient(#43c317,#01ad00);position: absolute;right: 5%;font-size: .7rem;border-radius: 2px;display: block;}
+#newsapp .adbtn div{background: url(http://p6.qhmsg.com/t01b588bbb0999d584e.png) 4px center no-repeat;background-size: auto 82%;padding: .2rem .5rem .2rem 2rem;color: #fff;box-shadow: 0px 2px 5px #000;}
+</style>
+<header id="header">
+    <div id="topnavwp">
+        <div id="nav" class="nav" style="">
+             <div class="logo"><a href="http://app.so.com/"><img src="static/images/logo_0413.png" width="84" height="23"></a></div>
+            <ul class="js-links" style="display:none">
+                <li><a href="http://m.so.com/" data-search="http://m.so.com/s?q=">网页</a></li>
+                <li><a href="http://m.news.so.com/" data-search="http://m.news.so.com/ns?q=">新闻</a></li>
+                <li><a href="http://m.map.so.com/#nearby" data-search="http://m.map.so.com/?ie=utf-8&amp;t=map&amp;src=m_app&amp;k=">地图</a></li>
+                <li id="app-icon" style="display: block;"><span>应用</span></li>
+                <li id="nav-more"><a href="javascript:void(0);">更多<img id="arr-more" src="static/images/arr_more.png"></a></li>
+            </ul>
+        </div>
+        <div id="search-box" class="search-box">
+            <div class="more-list">
+                <ul>
+                    <li><a href="http://m.video.so.com/" data-search="http://m.video.so.com/android/search/index.php?kw="><img src="static/images/video_icon.png"><span>影视</span></a></li>
+                    <li><a href="http://m.image.so.com/" data-search="http://m.image.so.com/s?q="><img src="static/images/image_icon.png"><span>图片</span></a></li>
+		    <li><a href="http://m.wenda.so.com/?src=m_app" data-search="http://m.wenda.so.com/search/?src=m_app&amp;q="><img src="static/images/wenda_icon.png"><span>问答</span></a></li>
+                </ul>
+            </div>
+            <div class="search-form-container">
+                <form class="search-form" action="http://app.so.com/search/index" id="searchForm">
+                    <div class="input-container">
+                    <input id="q" name="q" class="q" value="" placeholder="360手机助手" autocomplete="off" x-webkit-speech="">
+                    <input type="hidden" name="src" value="srp">
+                    <div class="search-box-reset" style="display: none;"></div>
+                    </div>
+                    <input type="submit" class="search-button" value="">
+                </form>
+            <div class="suggest-container" style="display: none;"><div class="suggest-content"></div><div class="suggest-toolbar"><div class="suggest-clearhistory">清除历史记录</div><div class="fill-all"></div><div class="suggest-close">关闭</div></div></div></div>
+        </div>
+    </div>
+
+    <div class="js-gamebook gamebook" style="display:none;"></div>
+
+        <div class="pinholder firstview">
+        <div class="pin">
+            <nav class="subnav">
+                                <ul>
+                    <li class=""><a href="http://app.so.com/">精选</a></li><li class=""><a href="http://app.so.com/rank/">排行</a></li><li class=""><a href="http://app.so.com/category/">分类</a></li><li class=""><a href="http://app.so.com/zjbb/">必备</a></li>                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+    	<div class="main">
+        <div class="pinholder" style="height: 41px;"><div class="pin">
+          <div class="classify-sec firstview">
+            <h2><a href="http://app.so.com/detail/index?pname=com.jin91.baiyintong&amp;id=3585959#nogo" class="go-back"><span>&nbsp;&nbsp;</span></a><!--白银通-->详情</h2>
+          </div>
+        </div></div>
+        
+        <div class="Relative">
+          <dl class="software-info">
+            <dt><span><img src="static/images/t01ed8a981e93c0dd66.png" alt=""></span></dt>
+            <dd>
+              <h2>白银通</h2>
+              <div class="star"><p style="width:99%"></p></div>
+              <p class="num">20.74MB</p>
+            </dd>
+          </dl>
+         
+        </div>
+
+        
+        <div class="downloadModule">
+            <div class="Box is-center">
+              
+
+              <div class="Box_flex" id="apkList">
+                  <span class="app-item" data-href="&amp;id=3585959" data-sid="3585959" data-asin="" data--pv="true"><a href="http://m.shouji.360tpcdn.com/170227/f60236ea895f26081770588cb329473d/com.jin91.baiyintong_4120.apk" class="js-downloadBtn btn-2 mainBtn"><span></span>立即下载</a></span>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="software-form">
+                    <h2>来自360手机助手<span><img src="static/images/t01264dc4e907fd00d1.gif" alt=""></span></h2>
+                    <div class="software-img" id="thumbList">
+                            <img src="static/images/t01ce44d47d6ad07fee.png">
+                            <img src="static/images/t010c557044b2a487cd.png">
+                            <img src="static/images/t01b3fe8a58a8000258.png">
+                            <img src="static/images/t012fe379a7a23113ab.png">
+                        </div>
+                    <ul>
+            <li>版本：4.1.2</li>
+            <li>下载：超过65万次</li>
+            <li>语言：中文</li>
+            <li>更新：2017-02-27</li>
+            <li>作者：深圳前海国鑫金服石油化工投资有限公司</li>
+          </ul>
+        </div>
+        <div class="software-about">
+                    <div class="about-little" id="shortDesc" style="display: none;">
+            贵金属投资交易当选白银通！<br>
+<br>
+——贵金属、现货重油、白银投资一网打尽<br>
+——实时行情、资讯、策略、交易一站式服务<br>
+5年老品牌，资金有保障，值得信赖！<br>
+<br>
+【实时行情】<br>
+专家即时建议、行业事件解读，您关心的都在这里<br>
+【资金保障】...            <p><a href="http://app.so.com/detail/index?pname=com.jin91.baiyintong&amp;id=3585959#nogo" id="expand">展开<span></span></a></p>
+          </div>
+          <div class="about-full" id="fullDesc" style="display: block;">
+            贵金属投资交易当选白银通！<br>
+<br>
+——贵金属、现货重油、白银投资一网打尽<br>
+——实时行情、资讯、策略、交易一站式服务<br>
+5年老品牌，资金有保障，值得信赖！<br>
+<br>
+【实时行情】<br>
+专家即时建议、行业事件解读，您关心的都在这里<br>
+【资金保障】<br>
+保证金专户专用，银行统一清算，存取款便捷<br>
+【专家直播】<br>
+权威分析师在线解读市场行情，专家一对一贴心服务<br>
+【极速交易】<br>
+盈利计算、热门活动、极速交易，精彩来袭<br>
+【正规专业】<br>
+正规交易所旗下会员单位，专业权威<br>
+<br>
+联系我们：<br>
+<br>
+网站：www.91guoxin.com <br>
+客服电话：400-699-9255<br>
+投资有风险，入市需谨慎！            <p><a href="http://app.so.com/detail/index?pname=com.jin91.baiyintong&amp;id=3585959#nogo" id="fold">收起<span></span></a></p>
+          </div>
+
+          
+        </div>
+        <div class="related">
+          <h2>相关推荐</h2>
+          <ul>
+          	            <li><a href="http://app.so.com/detail/index?pname=com.yijiej.app&amp;id=3723501"><span><img src="static/images/t01d3d02d4e311693d5.png" alt=""></span>易借金</a></li>
+                        <li><a href="http://app.so.com/detail/index?pname=com.chinamworld.main&amp;id=9347"><span><img src="static/images/t018c544997e683dd66.png" alt=""></span>中国建设银行</a></li>
+                        <li><a href="http://app.so.com/detail/index?pname=com.mfp.jelly.qihoo&amp;id=1987469"><span><img src="static/images/t01c5f4e0b4ad49066d.png" alt=""></span>宾果消消消-无流量也能玩</a></li>
+                        <li><a href="http://app.so.com/detail/index?pname=com.rongba.ecloneloan&amp;id=3689650"><span><img src="static/images/t014da86e979434fb78.png" alt=""></span>易贷款</a></li>
+                      </ul>
+        </div>
+        
+      </div>
+    </div>
+    <!-- <div class="goto-top"><a href="#gemore" data-type="2" class="user-pl-more-btn goto-bar">返回顶部</a></div></div> -->
+    <div id="thumbPreviewer"><div id="thumbContainer" style="overflow: hidden; position: relative;"><div id="swipeview-slider" style="position: absolute; top: 0px; height: 100%; width: 100%; transform: translate(0px, 0px) translateZ(0px); transition-timing-function: ease-out; transition-duration: 0s;"><div id="swipeview-masterpage-0" data-page-index="3" data-upcoming-page-index="3" style="transform: translateZ(0px); position: absolute; top: 0px; height: 100%; width: 100%; left: -100%;"></div><div id="swipeview-masterpage-1" data-page-index="0" data-upcoming-page-index="0" class="swipeview-active" style="transform: translateZ(0px); position: absolute; top: 0px; height: 100%; width: 100%; left: 0%;"></div><div id="swipeview-masterpage-2" data-page-index="1" data-upcoming-page-index="1" style="transform: translateZ(0px); position: absolute; top: 0px; height: 100%; width: 100%; left: 100%;"></div></div></div><ul id="thumbIndicator" class="pagination"><li></li><li></li><li></li><li></li></ul></div>
+
+    <div class="fixedBar">
+      <span class="app-item" data-href="&amp;id=3585959" data-sid="3585959" data-asin="" data--pv="true">
+        <a href="http://m.shouji.360tpcdn.com/170227/f60236ea895f26081770588cb329473d/com.jin91.baiyintong_4120.apk" class="btn btn-primary js-downloadBtn" data-byzs="1">用360手机助手高速下载</a>
+      </span>
+    </div>
+
+
+<script type="text/javascript">
+  window._monitorUrl_ = 'http://m.app.so.com/detail/index?id=100084';
+</script>
+<div class="mod_layer" id="apkDownloader" style="display:none;">
+    <div class="mod mod-download">
+        <a href="http://app.so.com/detail/index?pname=com.jin91.baiyintong&amp;id=3585959#nogo" class="mod_close js-close"></a>
+        <div class="mod_hd c1">温馨提示</div>
+        <div class="mod_bd">
+            使用360手机助手高速下载，享受安全、免流量的下载体验。
+        </div>
+        <div class="mod_ft btnGroup">
+            <a href="http://app.so.com/detail/index?pname=com.jin91.baiyintong&amp;id=3585959#nogo" class="btn btn-1 js-zhushou">高速下载</a><a class="btn js-apk" href="http://app.so.com/detail/index?pname=com.jin91.baiyintong&amp;id=3585959#nogo">普通下载</a>
+        </div>
+    </div>
+</div>
+<script src="static/js/45.js"></script>
+<!--spirit.js-->
+<script src="static/js/45be3c09c978b362.js"></script>
+<script src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/127.js"></script>
+<script type="text/javascript" src="static/js/record.js"></script>
+
+
+<script>
+    var GameBooker = {
+        load : function($container) {
+            if (!$container[0]) return;
+
+            var url = 'http://openbox.mobilem.360.cn/qing/getgamebookinfo?_=' + (new Date).getTime();
+
+            $.ajax({
+                url : url,
+                type : 'get',
+                dataType : 'jsonp',
+                success : function(list) {
+                    if (list && list.length > 0) {
+                        var item = list[0];
+                        $container.html([
+                            '<a class="js-link" target="_blank" href="' + item.url +'">',
+                                '<img style="width:100%;" src="' + item.img + '" />',
+                            '</a>'
+                        ].join(''));
+
+                        $container.show();
+                    }
+                }
+            });
+        }
+    };
+
+    GameBooker.load($('.js-gamebook'));
+</script>
+
+
+</body></html>
