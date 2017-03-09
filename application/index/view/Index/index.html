@@ -15,37 +15,10 @@
 
 
 <div id="warpper">
-    <header id="header">
-        <div id="topnavwp">
-            <div id="nav" class="nav" style="">
-                <div class="logo">
-                    <a href="{:url('index/index')}">
-                        <img src="/public/static/images/logo_0413.png" width="84" height="23"></a>
-                </div>
-            </div>
-            <div id="search-box" class="search-box">
-                <div class="search-form-container">
-                    <form class="search-form" action="/search/index" id="searchForm">
-                        <div class="input-container">
-                            <input id="q" name="q" class="q" placeholder="app云集" autocomplete="off" x-webkit-speech="">
-                            <input name="src" value="srp" type="hidden">
-                            <div class="search-box-reset" style="display: none;"></div>
-                        </div>
-                        <input class="search-button" value="" type="submit"></form>
-                    <div class="suggest-container">
-                        <div class="suggest-content"></div>
-                        <div class="suggest-toolbar">
-                            <div class="suggest-clearhistory">清除历史记录</div>
-                            <div class="fill-all"></div>
-                            <div class="suggest-close">关闭</div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="js-gamebook gamebook" style="display:none;"></div>
-        <!--包含菜单模版menu-->
-        {include file="public/menu" /}
-    </header>
+
+    <!--包含头部模版menu-->
+    {include file="public/header" /}
+
 
     <div class="main">
         <div class="switcher" id="applist">
@@ -128,7 +101,7 @@
     <div class="goto-top">
         <a href="#gemore" id="back-to-top" class="user-pl-more-btn goto-bar">返回顶部</a>
     </div>
-    <script src="static/js/jquery-3.1.1.min.js"></script>
+
     <script>
         $("#back-to-top").click(function () {
             $("body,html").animate({
@@ -156,9 +129,6 @@
                 targetPanel.show();
             }
         })
-
-    </script>
-    <script>
 
     </script>
 </div>

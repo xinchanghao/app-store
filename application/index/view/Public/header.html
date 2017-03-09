@@ -1,0 +1,52 @@
+<header id="header">
+    <div id="topnavwp">
+        <div id="nav" class="nav" style="">
+            <div class="logo">
+                <a href="{:url('index/index')}">
+                    <img src="/public/static/images/logo_0413.png" width="84" height="23"></a>
+            </div>
+        </div>
+        <div id="search-box" class="search-box">
+            <div class="search-form-container">
+                <form class="search-form" action="/search/index" id="searchForm">
+                    <div class="input-container">
+                        <input id="q" name="q" class="q" placeholder="app云集" autocomplete="off" x-webkit-speech="">
+                        <input name="src" value="srp" type="hidden">
+                        <div class="search-box-reset" style="display: none;"></div>
+                    </div>
+                    <input class="search-button" value="" type="submit"></form>
+            </div>
+        </div>
+    </div>
+    <div class="pinholder firstview">
+        <div class="pin">
+                  <nav class="subnav">
+                <ul  id="banner">
+                    <li {eq name="ACTION_NAME" value="index"}class="cur"{/eq}>
+                        <a href="{:url('index/index')}">精选</a></li>
+                    <li {eq name="ACTION_NAME" value="rank"}class="cur"{/eq}>
+                        <a href="{:url('index/rank')}">排行</a></li>
+                    <li {eq name="ACTION_NAME" value="category"}class="cur"{/eq}>
+                        <a href="{:url('index/category')}">分类</a></li>
+                    <li {eq name="ACTION_NAME" value="zjbb"}class="cur"{/eq}>
+                        <a href="{:url('index/zjbb')}">必备</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<style>
+    .pinholder{
+        height: 37px;
+    }
+</style>
+<script src="/public/static/js/jquery-3.1.1.min.js"></script>
+<!--<script type="text/javascript">-->
+    <!--$(document).ready(function(){-->
+        <!--$("#banner li").click(function(eq) {-->
+            <!--$(this).removeClass("cur");-->
+            <!--//$(this).addClass("cur");-->
+            <!--//$("#banner ul li:first").removeClass("cur");-->
+        <!--})-->
+    <!--});-->
+<!--</script>-->
