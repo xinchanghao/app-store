@@ -7,9 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
     <title>appstore-首页</title>
-    <link rel="stylesheet" href="/public/static/css/index.css"></head>
+    <link rel="stylesheet" href="/public/static/css/index.css">
+
+</head>
 
 <body>
+
+
 <div id="warpper">
     <header id="header">
         <div id="topnavwp">
@@ -41,10 +45,8 @@
         <div class="js-gamebook gamebook" style="display:none;"></div>
         <!--包含菜单模版menu-->
         {include file="public/menu" /}
-
-
-
     </header>
+
     <div class="main">
         <div class="switcher" id="applist">
             <ul class="tab">
@@ -54,6 +56,8 @@
                 <li class="switcher-tab" data-type="2" data-page="0">
                     <a href="#nogo">游戏</a></li>
             </ul>
+
+            <!--软件-->
             <div class="lists switcher-panel switcher-panel-cur">
                 <ul>
 
@@ -84,15 +88,79 @@
                 <div class="load-bar">
                     <a href="#gemore" data-type="1" class="user-pl-more-btn loadmore">加载更多</a></div>
             </div>
-            <div class="lists switcher-panel">
-                <ul></ul>
+
+            <!--游戏-->
+            <div class="lists switcher-panel switcher-panel-cur" style="display: none">
+                <ul>
+                    <li class="app-item link">
+                        <div class="list-img">
+                            <img src="/public/static/images/{$vo.Pic}" alt=""></div>
+                        <div class="list-cont">
+                            <div class="lt-c-tit">
+                                <h2>
+                                    <a href="#nogo">123</a></h2>
+                                <span>8.59MB</span></div>
+                            <div class="lt-c-s-n">
+                                <div class="lt-c-s-n-l">
+                                    <div class="star">
+                                        <p style="width: 73%;"></p>
+                                    </div>
+                                </div>
+                                <span>123万次下载</span></div>
+                        </div>
+                        <div class="btns">
+                            <a class="dl-btn js-downloadBtn" href="http://shouji.360tpcdn.com/170214/5aeae868026625e95b389b357fbdd186/com.ss.android.article.video_116.apk">
+                                <span></span>下载</a>
+                        </div>
+                    </li>
+                </ul>
                 <div class="load-bar">
-                    <a href="#gemore" data-type="2" class="user-pl-more-btn loadmore">加载更多</a></div>
+                    <a href="#gemore" data-type="1" class="user-pl-more-btn loadmore">加载更多</a></div>
             </div>
+
+            <!--<div class="lists switcher-panel1">-->
+                <!--<ul></ul>-->
+                <!--<div class="load-bar">-->
+                    <!--<a href="#gemore" data-type="2" class="user-pl-more-btn loadmore">加载更多</a></div>-->
+            <!--</div>-->
         </div>
     </div>
     <div class="goto-top">
-        <a href="#gemore" data-type="2" class="user-pl-more-btn goto-bar">返回顶部</a></div>
+        <a href="#gemore" id="back-to-top" class="user-pl-more-btn goto-bar">返回顶部</a>
+    </div>
+    <script src="static/js/jquery-3.1.1.min.js"></script>
+    <script>
+        $("#back-to-top").click(function () {
+            $("body,html").animate({
+                scrollTop:0
+            },1000);
+            return false;
+        });
+        $(".switcher-tab").on("click",function (e) {
+            e.preventDefault();
+            var tab=$(this);
+            if (tab.is(".cur")){
+                return true;
+            }
+            else{
+                var switcher=tab.parents(".switcher").eq(0);
+                var tabs=switcher.find('.switcher-tab');
+                var panels=switcher.find('.switcher-panel');
+                //var type=tab.data('type');
+                var index=tab.index();
+                //console.log(index);索引测试
+                tabs.removeClass('cur');
+                tab.addClass('cur');
+                var targetPanel=panels.eq(index);
+                panels.hide();
+                targetPanel.show();
+            }
+        })
+
+    </script>
+    <script>
+
+    </script>
 </div>
 </body>
 

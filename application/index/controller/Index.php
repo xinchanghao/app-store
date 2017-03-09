@@ -22,7 +22,7 @@ class Index
         //var_dump($apps);
         $view = new View();
         $view->assign('apps',$apps);
-        return $view->fetch('index');
+        return $view->fetch('Detail/detail');
     }
 
 }
