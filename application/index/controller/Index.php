@@ -9,9 +9,11 @@ class Index
     //打印首页
     public function index()
     {
-        $apps=db('apps')->where('AppStatus',1)->select();
+        $total=db('apps')->count();
+        $apps=db('apps')->where('AppStatus',1)->limit(5)->order("AppID ASC")->select();
         //var_dump($apps);
         $view = new View();
+        $view->assign('total',$total);
         $view->assign('apps',$apps);
         return $view->fetch('index');
     }
@@ -29,11 +31,19 @@ class Index
     //打印分类页
     public function category()
     {
-        $apps=db('apps')->where('AppStatus',1)->select();
+        $cate=db('category')->select();
         //var_dump($apps);
         $view = new View();
-        $view->assign('apps',$apps);
+        $view->assign('cate',$cate);
         return $view->fetch('Category/category');
+    }
+
+    public function data()
+    {
+       $start = Input('post.start');
+       //echo($start);
+       $list = db('apps')->limit($start, 5)->order('AppID asc')->select();
+       return (array( 'result'=>$list,'status'=>1, 'msg'=>'获取成功！'));
     }
 
 }
