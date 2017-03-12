@@ -112,7 +112,7 @@
                 $("#loadmore").text('没有数据了亲...').css({"border-top":"1px solid #d4d5d6","height":"30px","line-height":"30px"});
                 return false;
             } else {
-                $.post("{:url('Index/data')}", {start: nStart}, function(res) {
+                $.post("{:url('Index/indexdata')}", {start: nStart}, function(res) {
                     $.each(res['result'], function(i, item) {
                         _this.append('<li class="app-item link">\
                             <div class="list-img">\

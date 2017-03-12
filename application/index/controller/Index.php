@@ -17,12 +17,35 @@ class Index
         $view->assign('apps',$apps);
         return $view->fetch('index');
     }
+     public function indexdata()
+    {
+       $start = Input('post.start');
+       //echo($start);
+       $list = db('apps')->order('AppID asc')->limit($start, 5)->select();
+       return (array( 'result'=>$list,'status'=>1, 'msg'=>'获取成功！'));
+    }
+
+    //打印排行页
+    public function rank()
+    {
+       $total=db('apps')->count();
+       $apps=db('apps')->where('AppStatus',1)->order("DownloadCount DESC")->limit(5)->select();
+       $view = new View();
+       $view->assign('total',$total);
+       $view->assign('apps',$apps);
+       return $view->fetch('Rank/rank');
+    }
+     public function rankdata()
+    {
+       $start = Input('post.start');
+       $list = db('apps')->order('DownloadCount DESC')->limit($start, 5)->select();
+       return (array( 'result'=>$list,'status'=>1, 'msg'=>'获取成功！'));
+    }
 
     //打印详情页
     public function detail()
     {
         $apps=db('apps')->where('AppStatus',1)->select();
-        //var_dump($apps);
         $view = new View();
         $view->assign('apps',$apps);
         return $view->fetch('Detail/detail');
@@ -32,18 +55,34 @@ class Index
     public function category()
     {
         $cate=db('category')->select();
-        //var_dump($apps);
         $view = new View();
         $view->assign('cate',$cate);
         return $view->fetch('Category/category');
     }
 
-    public function data()
+    //打印必备页
+    public function zjbb()
     {
-       $start = Input('post.start');
-       //echo($start);
-       $list = db('apps')->limit($start, 5)->order('AppID asc')->select();
-       return (array( 'result'=>$list,'status'=>1, 'msg'=>'获取成功！'));
+        $view = new View();
+        //$view->assign('apps',$apps);
+        return $view->fetch('Zjbb/zjbb');
     }
+    public function zjbbdata()
+    {
+
+        //$data=db('category')->alias('c')->join('apps a','c.CategoryID=a.CategoryID')->order("DownloadCount DESC")->select();
+        $cate=db('category')->select();
+        //$view = new View();
+        //$view->assign('cate',$cate);
+        //foreach($cate as $n=> $val){
+        //echo $n;
+           // $result[$n]=db('apps')->alias('a')->join('category c','c.CategoryID=a.CategoryID')->where('apps.CategoryID="%d"',$n)->order("DownloadCount DESC")->limit(5)->select();
+        //}
+//var_dump($result);
+        //die();
+        return (array( 'result'=>$cate,'status'=>1, 'msg'=>'获取成功！'));
+    }
+
+
 
 }
