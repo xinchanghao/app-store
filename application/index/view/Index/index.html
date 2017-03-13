@@ -113,6 +113,7 @@
                 return false;
             } else {
                 $.post("{:url('Index/indexdata')}", {start: nStart}, function(res) {
+                    //console.log(res);
                     $.each(res['result'], function(i, item) {
                         _this.append('<li class="app-item link">\
                             <div class="list-img">\

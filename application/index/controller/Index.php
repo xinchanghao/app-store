@@ -69,18 +69,18 @@ class Index
     }
     public function zjbbdata()
     {
-
         //$data=db('category')->alias('c')->join('apps a','c.CategoryID=a.CategoryID')->order("DownloadCount DESC")->select();
         $cate=db('category')->select();
-        //$view = new View();
-        //$view->assign('cate',$cate);
-        //foreach($cate as $n=> $val){
-        //echo $n;
-           // $result[$n]=db('apps')->alias('a')->join('category c','c.CategoryID=a.CategoryID')->where('apps.CategoryID="%d"',$n)->order("DownloadCount DESC")->limit(5)->select();
-        //}
-//var_dump($result);
-        //die();
-        return (array( 'result'=>$cate,'status'=>1, 'msg'=>'获取成功！'));
+        foreach($cate as $n=> $val){
+             $con['CategoryID']=$val['CategoryID'];
+             $apps[$n]=db('apps')->alias('a')->where($con)->order("DownloadCount DESC")->limit(5)->select();
+             $data[$n]=array(
+             'category'=>$val,
+             'app'=>$apps[$n],
+             );
+        }
+        //var_dump($data[10]);
+        return (array( 'result'=>$data,'status'=>1, 'msg'=>'获取成功！'));
     }
 
 

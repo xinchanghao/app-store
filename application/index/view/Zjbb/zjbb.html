@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>appstore-必备</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no ">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link href="/public/static/css/necessary.css" rel="stylesheet"></head>
 
 <body>
@@ -35,45 +35,63 @@
             type:"post",
             url:"{:url('Index/zjbbdata')}",
             dataType:'json',
-            data:"",
             success:function(data){
-                $.each(data['res'],function (i,list) {
-                    $(".main").append('        <div class="pinholder" style="height: 26px;">\
-                        <div class="pin">\
-                        <div class="tit">\
-                        <h2>list[i].CategoryName</h2>\
-                        <span>5款</span></div>\
-                    </div>\
-                    </div>');
-                    $.each(data['apps'],function (n,item) {
-                        $(".main").append('<div class="lists">\
-                        <ul>\
-                        <li class="app-item link" data-href="/detail/index?pname=com.qihoo360.mobilesafe&amp;id=77208" data-sid="77208" data-asin="">\
-                        <div class="list-img">\
-                        <img src="./360应用_必备_files/t0168f384a0b6a971c2.png" alt=""></div>\
-                        <div class="list-cont">\
-                        <div class="lt-c-tit">\
-                        <h2>\
-                        <a href="http://app.so.com/zjbb/#nogo">360手机卫士</a></h2>\
-                    <span>13.71MB</span></div>\
-                    <div class="lt-c-s-n">\
-                        <div class="lt-c-s-n-l">\
-                        <div class="star">\
-                        <p style="width: 88%;"></p>\
-                        </div>\
-                        </div>\
-                        <span>168834万次下载</span></div>\
-                    </div>\
-                    <div class="btns">\
-                        <a class="dl-btn js-downloadBtn" href="http://hot.m.shouji.360tpcdn.com/170301/193a6173c1985ec2d3dee6933c3aca16/com.qihoo360.mobilesafe_251.apk">\
-                        <span></span>下载</a>\
-                        </div>\
-                        </li>\
-                        </ul>\
-                        </div>')
-                    });
+                //console.log(data['result'][0].category.CategoryName);
+                $.each(data['result'],function (i,item) {
+                    $.each(data['result'][i],function (j,item2) {
+                    //接收到json数据result[category];
+                        //console.log(item2);
+                        if(Object.prototype.toString.call(item2)!='[object Array]')//item2为数组时跳过append();
+                        {
+                            $(".main").append('        <div class="pinholder" style="height: 26px;">\
+                                    <div class="pin">\
+                                    <div class="tit">\
+                                    <h2>'+item2.CategoryName+'</h2>\
+                                    <span>'+item.app.length+'款产品</span></div>\
+                                    </div>\
+                                    </div>');
+                        }//第一次判断数组结束
 
-                });
+                        //console.log(item3);
+                        if(Object.prototype.toString.call(item2)=='[object Array]')//item3为数组时执行append();
+                        {
+                            $.each(data['result'][i],function (n,item3) {
+                                //console.log(item3);
+                                $.each(data['result'][i][n],function (m,item4) {
+                                    //console.log(item4);
+                                    if(typeof (item4)=='object') //判断item4此时为对象；
+                                    {
+                                        $(".main").append('<div class="lists">\
+                                        <ul>\
+                                        <li class="app-item link" data-href="#" data-sid="77208" data-asin="">\
+                                        <div class="list-img">\
+                                        <img src="/public/static/images/'+item4.Pic+'" alt=""></div>\
+                                        <div class="list-cont">\
+                                        <div class="lt-c-tit">\
+                                        <h2>\
+                                        <a href="http://app.so.com/zjbb/#nogo">'+item4.AppName+'</a></h2>\
+                                    <span>13.71MB</span></div>\
+                                    <div class="lt-c-s-n">\
+                                        <div class="lt-c-s-n-l">\
+                                        <div class="star">\
+                                        <p style="width: 88%;"></p>\
+                                        </div>\
+                                        </div>\
+                                        <span>'+item4.DownloadCount+'万次下载</span></div>\
+                                    </div>\
+                                    <div class="btns">\
+                                        <a class="dl-btn js-downloadBtn" href="#">\
+                                        <span></span>下载</a>\
+                                        </div>\
+                                        </li>\
+                                        </ul>\
+                                        </div>')
+                                    }
+                                })//item4循环结束；
+                            });//item3循环
+                        }//第二次判断数据结束；
+                    });//item2循环
+                });//item循环
             }
         });
     });
