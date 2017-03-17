@@ -17,37 +17,25 @@
         <div class="switcher" id="grouplist">
             <ul class="tab">
                 <li class="cur switcher-tab">
-                    <a href="http://app.so.com/category/#nogo">软件</a></li>
+                    <a href="#">软件</a></li>
                 <li class="switcher-tab">
-                    <a href="http://app.so.com/category/#nogo">游戏</a></li>
+                    <a href="#">游戏</a></li>
             </ul>
             <div class="classify lists switcher-panel switcher-panel-cur">
                 <ul class="lists-soft">
-                    <li data-href="/category/app_list?cid=3&amp;cat_index=0&amp;total=35&amp;csid=102158&amp;cat_name=%E6%96%B0%E9%85%B7%E5%BA%94%E7%94%A8%E9%9B%86%E4%B8%AD%E8%90%A5" class="link link_0">
-                        <div class="classify-img">
-                            <img src="/public/static/images/t01f77e15cfb917a802.jpg" alt=""></div>
-                        <div class="classify-cont">
-                            <h2>
-                                <span>新酷应用集中营</span>
-                                <span>35款</span></h2>
-                            <p>科技媒体爱范儿专业推荐，新鲜应用抢先玩</p>
-                        </div>
-                        <div class="classify-more">
-                            <a href="http://app.so.com/category/#nogo"></a>
-                        </div>
-                    </li>
+
                     {volist name="cate" id="vo"}
-                        <li data-href="#" class="link link_0">
+                        <li data-href="#" class="link link_0" data-id="{$vo.CategoryID}">
                             <div class="classify-img">
                                 <img src="/public/static/images/{$vo.Pic}" alt=""></div>
                             <div class="classify-cont">
                                 <h2>
                                     <span>{$vo.CategoryName}</span>
                                     <span>35款</span></h2>
-                                <p>科技媒体爱范儿专业推荐，新鲜应用抢先玩</p>
+                                <p>{$vo.CategoryDetail}</p>
                             </div>
                             <div class="classify-more">
-                                <a href="http://app.so.com/category/#nogo"></a>
+                                <a href="#"></a>
                             </div>
                         </li>
                     {/volist}
@@ -91,7 +79,14 @@
             panels.hide();
             targetPanel.show();
         }
-    })
+    });
+
+    $("li.link").on("click",function (e) {
+        e.preventDefault();
+        var iD=$(this).attr('data-id');
+        //console.log(iD);
+        window.location.href='{:url("Index/catelist")}?id='+ iD ;
+    });
 
 </script>
 </body>

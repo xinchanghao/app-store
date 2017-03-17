@@ -4,6 +4,7 @@ use think\View;
 use think\Controller;
 $request = \think\Request::instance();
 define('ACTION_NAME', $request->action());
+
 class Index
 {
     //打印首页
@@ -57,25 +58,28 @@ class Index
         return $view->fetch('Detail/detail');
 
     }
-    public function detaildata()
-    {
-        $id=Input('post.id');
-        $apps=db('apps')->where('AppID',$id)->select();
-        //$view = new View();
-        //$view->assign('apps',$apps);
-        //return $view->fetch('Detail/detail');
-        return (array( 'result'=>$list,'status'=>1, 'msg'=>'获取成功！'));
 
-    }
 
     //打印分类页
     public function category()
     {
-        $cate=db('category')->select();
+        $cate=db('category')->order('CategoryID ASC')->select();
         $view = new View();
         $view->assign('cate',$cate);
         return $view->fetch('Category/category');
     }
+    //打印分类列表页
+    public function catelist()
+    {
+        $id=input('get.id');
+        $apps=db('apps')->where('CategoryID',$id)->select();
+        $cate=db('category')->where('CategoryID',$id)->find();
+        $view = new View();
+        $view->assign('apps',$apps);
+        $view->assign('cate',$cate);
+        return $view->fetch('List/list');
+    }
+
 
     //打印必备页
     public function zjbb()

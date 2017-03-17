@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>appstore-分类</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <link href="/public/static/css/classify.css" rel="stylesheet"></head>
+
+<body>
+<div id="warpper">
+    <!--包含头部模版menu-->{include file="public/header" /}
+    <div class="main" id="applist">
+        <div class="classify-sec" style="position:relative;">
+            <h2>
+                <a href="#nogo" class="go-back">
+                    <span>&nbsp;</span>{$cate.CategoryName}</a></h2>
+            <ul class="tab">
+                <li class="switcher-tab cur">
+                    <a href="#nogo">热门</a></li>
+                <li class="switcher-tab">
+                    <a href="#nogo">最新</a></li>
+            </ul>
+        </div>
+        <div class="lists switcher-panel switcher-panel-cur" style="display: block;">
+            <ul id="hotlist">
+                {volist name="apps" id="vo"}
+                <li class="app-item link" data-href="#" data-sid="1557729" data-asin="">
+                    <div class="list-img">
+                        <img src="/public/static/images/{$vo.Pic}" alt=""></div>
+                    <div class="list-cont">
+                        <div class="lt-c-tit">
+                            <h2>
+                                <a href="#nogo">{$vo.AppName}</a></h2>
+                            <span>15.68MB</span></div>
+                        <div class="lt-c-s-n">
+                            <div class="lt-c-s-n-l">
+                                <div class="star">
+                                    <p style="width: 68%;"></p>
+                                </div>
+                            </div>
+                            <span>{$vo.DownloadCount}</span></div>
+                    </div>
+                    <div class="btns">
+                        <a class="dl-btn js-downloadBtn" href="#">
+                            <span></span>下载</a>
+                    </div>
+                </li>
+                {/volist}
+            </ul>
+            <div class="load-bar">
+                <a href="#gemore" data-type="1" class="user-pl-more-btn loadmore">加载更多</a></div>
+        </div>
+        <div class="lists switcher-panel" style="display: none;">
+            <ul id="newestList">
+                <li data-href="/detail/index?pname=com.yuanyu.tinber&amp;id=2490575" class="app-item">
+                    <div class="list-img">
+                        <img src="360%E5%BA%94%E7%94%A8_%E5%88%86%E7%B1%BB_files/t019d952eb2cf93573c.png" alt=""></div>
+                    <div class="list-cont">
+                        <div class="lt-c-tit">
+                            <h2>
+                                <a href="#nogo">听呗 FM</a></h2>
+                            <span>26.42MB</span></div>
+                        <div class="lt-c-s-n">
+                            <div class="lt-c-s-n-l">
+                                <div class="star">
+                                    <p style="width: 98%;"></p>
+                                </div>
+                            </div>
+                            <span>86万次下载</span></div>
+                    </div>
+                    <div class="btns">
+                        <a class="dl-btn js-downloadBtn" href="http://m.shouji.360tpcdn.com/170317/ee25cfd12dfa0af387dfbbe114d4a765/com.yuanyu.tinber_81.apk">
+                            <span></span>下载</a>
+                    </div>
+                </li>
+                <li data-href="/detail/index?pname=com.chinamobile.cmccwifi&amp;id=191394">
+                    <div class="list-img">
+                        <img src="360%E5%BA%94%E7%94%A8_%E5%88%86%E7%B1%BB_files/t017cd560532e459c47.png" alt=""></div>
+                    <div class="list-cont">
+                        <div class="lt-c-tit">
+                            <h2>
+                                <a href="#nogo">随e行WLAN</a></h2>
+                            <span>15.17MB</span></div>
+                        <div class="lt-c-s-n">
+                            <div class="lt-c-s-n-l">
+                                <div class="star">
+                                    <p style="width: 63%;"></p>
+                                </div>
+                            </div>
+                            <span>4263万次下载</span></div>
+                    </div>
+                    <div class="btns">
+                        <a class="dl-btn js-downloadBtn" href="http://m.shouji.360tpcdn.com/170317/773941f97f0324d6f943129f0a7ddb10/com.chinamobile.cmccwifi_831315.apk">
+                            <span></span>下载</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="load-bar">
+                <a href="#gemore" data-type="1" class="user-pl-more-btn loadmore">加载更多</a></div>
+        </div>
+    </div>
+</div>
+<div class="goto-top">
+    <a href="#gemore" id="back-to-top" class="user-pl-more-btn goto-bar">返回顶部</a>
+</div>
+
+
+<script>
+    //返回顶部
+    $("#back-to-top").click(function () {
+        $("body,html").animate({
+            scrollTop:0
+        },1000);
+        return false;
+    });
+////tab切换
+//$(".switcher-tab").on("click",function (e) {
+//    e.preventDefault();
+//    var tab=$(this);
+//    if (tab.is(".cur")){
+//        return true;
+//    }
+//    else{
+//        var switcher=tab.parents(".switcher").eq(0);
+//        var tabs=switcher.find('.switcher-tab');
+//        var panels=switcher.find('.switcher-panel');
+//        //var type=tab.data('type');
+//        var index=tab.index();
+//        //console.log(index);索引测试
+//        tabs.removeClass('cur');
+//        tab.addClass('cur');
+//        var targetPanel=panels.eq(index);
+//        panels.hide();
+//        targetPanel.show();
+//    }
+//})
+</script>
+</body>
+
+</html>
