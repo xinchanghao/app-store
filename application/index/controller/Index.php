@@ -45,10 +45,27 @@ class Index
     //打印详情页
     public function detail()
     {
-        $apps=db('apps')->where('AppStatus',1)->select();
+        $id=input('get.id');
+        //var_dump($id);
+        $apps=db('apps')->where('AppID',$id)->select();
+        //print_r($apps[0]['VersionID']);
+        //die();
+        $versions=db('versions')->where('VersionID',$apps[0]['VersionID'])->find();
         $view = new View();
         $view->assign('apps',$apps);
+        $view->assign('versions',$versions);
         return $view->fetch('Detail/detail');
+
+    }
+    public function detaildata()
+    {
+        $id=Input('post.id');
+        $apps=db('apps')->where('AppID',$id)->select();
+        //$view = new View();
+        //$view->assign('apps',$apps);
+        //return $view->fetch('Detail/detail');
+        return (array( 'result'=>$list,'status'=>1, 'msg'=>'获取成功！'));
+
     }
 
     //打印分类页

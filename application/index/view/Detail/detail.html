@@ -8,6 +8,18 @@
     <link href="/public/static/css/details.css" rel="stylesheet"></head>
 
 <body>
+<style>
+    .downloadModule {
+        position: absolute;
+        top:50%;
+        margin-top: -15px;
+        right:22px;
+    }
+</style>
+
+
+
+
 <div id="warpper">
     <!--头部模板文件-->
     {include file="public/header" /}
@@ -17,37 +29,39 @@
             <div class="pin">
                 <div class="classify-sec firstview">
                     <h2>
-                        <a href="http://app.so.com/detail/index?pname=com.jin91.baiyintong&amp;id=3585959#nogo" class="go-back">
+                        <a href="#" class="go-back">
                             <span>&nbsp;&nbsp;</span></a>
-                        <!--白银通-->详情</h2></div>
+                        详情</h2></div>
             </div>
         </div>
         <div class="Relative">
             <dl class="software-info">
                 <dt>
               <span>
-                <img src="/public/static/images/t01ed8a981e93c0dd66.png" alt=""></span>
+                <img src="/public/static/images/{$apps[0]['Pic']}" alt=""></span>
                 </dt>
                 <dd>
-                    <h2>白银通</h2>
+                    <h2>{$apps[0]['AppName']}</h2>
                     <div class="star">
                         <p style="width:99%"></p>
                     </div>
-                    <p class="num">20.74MB</p></dd>
-            </dl>
-        </div>
-        <div class="downloadModule">
-            <div class="Box is-center">
-                <div class="Box_flex" id="apkList">
+                    <p class="num">20.74MB</p>
+                    <div class="downloadModule">
+                        <div class="Box is-center">
+                            <div class="Box_flex" id="apkList">
               <span class="app-item" data-href="&amp;id=3585959" data-sid="3585959" data-asin="" data--pv="true">
-                <a href="http://m.shouji.360tpcdn.com/170227/f60236ea895f26081770588cb329473d/com.jin91.baiyintong_4120.apk" class="js-downloadBtn btn-2 mainBtn">
+                <a href="#" class="js-downloadBtn btn-2 mainBtn">
                   <span></span>立即下载</a>
               </span>
-                </div>
-            </div>
+                            </div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
         </div>
+
         <div class="software-form">
-            <h2>来自360手机助手
+            <h2>来自APP应用商店
                 <span>
               <img src="/public/static/images/t01264dc4e907fd00d1.gif" alt=""></span></h2>
             <div class="software-img" id="thumbList">
@@ -56,10 +70,10 @@
                 <img src="/public/static/images/t01b3fe8a58a8000258.png">
                 <img src="/public/static/images/t012fe379a7a23113ab.png"></div>
             <ul>
-                <li>版本：4.1.2</li>
-                <li>下载：超过65万次</li>
+                <li>版本：{$versions['VersionName']}</li>
+                <li>下载：超过{$apps[0]['DownloadCount']}万次</li>
                 <li>语言：中文</li>
-                <li>更新：2017-02-27</li>
+                <li>更新：{$versions['Time']}</li>
                 <li>作者：深圳前海国鑫金服石油化工投资有限公司</li></ul>
         </div>
         <div class="software-about">

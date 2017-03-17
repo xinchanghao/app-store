@@ -93,7 +93,7 @@
             } else {
                 $.post("{:url('Index/rankdata')}", {start: nStart}, function(res) {
                     $.each(res['result'], function(i, item) {
-                        _this.append('<li class="app-item link">\
+                        _this.append('<li class="app-item link" data-id="'+item.AppID+'">\
                             <div class="list-img">\
                             <img src="/public/static/images/'+item.Pic+'"alt=""/></div>\
                             <div class="list-cont">\
@@ -114,6 +114,11 @@
                             <span></span>下载</a>\
                             </div>\
                             </li>');
+                        $(document).on("click", ".link", function (e) {
+                            e.preventDefault();
+                            var iD=$(this).attr('data-id');
+                            window.location.href='{:url("Index/detail")}?id='+ iD ;
+                        });
                     });
                 });
                 nStart += 5;
@@ -147,6 +152,12 @@
             }
         })
 
+        $("li.app-item").on("click",function (e) {
+            e.preventDefault();
+            var iD=$(this).attr('data-id');
+            //console.log(iD);
+            window.location.href='{:url("Index/detail")}?id='+ iD ;
+        });
     </script>
 </div>
 </body>

@@ -34,7 +34,7 @@
             <div class="lists switcher-panel switcher-panel-cur">
                 <ul class="xinhao">
                     {volist name="apps" id="vo"}
-                    <li class="app-item link">
+                    <li class="app-item link" data-id="{$vo.AppID}">
                         <div class="list-img">
                             <img src="/public/static/images/{$vo.Pic}" alt=""></div>
                         <div class="list-cont">
@@ -51,7 +51,7 @@
                                 <span>{$vo.DownloadCount}万次下载</span></div>
                         </div>
                         <div class="btns">
-                            <a class="dl-btn js-downloadBtn" href="http://shouji.360tpcdn.com/170214/5aeae868026625e95b389b357fbdd186/com.ss.android.article.video_116.apk">
+                            <a class="dl-btn js-downloadBtn" href="#">
                                 <span></span>下载</a>
                         </div>
                     </li>
@@ -115,7 +115,7 @@
                 $.post("{:url('Index/indexdata')}", {start: nStart}, function(res) {
                     //console.log(res);
                     $.each(res['result'], function(i, item) {
-                        _this.append('<li class="app-item link">\
+                        _this.append('<li class="app-item link" data-id="'+item.AppID+'">\
                             <div class="list-img">\
                             <img src="/public/static/images/'+item.Pic+'"alt=""/></div>\
                             <div class="list-cont">\
@@ -136,6 +136,11 @@
                             <span></span>下载</a>\
                             </div>\
                             </li>');
+                        $(document).on("click", ".link", function (e) {
+                            e.preventDefault();
+                            var iD=$(this).attr('data-id');
+                            window.location.href='{:url("Index/detail")}?id='+ iD ;
+                        });
                     });
                 });
                 nStart += 5;
@@ -170,6 +175,13 @@
                 targetPanel.show();
             }
         })
+
+        $("li.app-item").on("click",function (e) {
+            e.preventDefault();
+            var iD=$(this).attr('data-id');
+            //console.log(iD);
+            window.location.href='{:url("Index/detail")}?id='+ iD ;
+        });
 
     </script>
 </div>

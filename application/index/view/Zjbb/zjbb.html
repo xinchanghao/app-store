@@ -63,7 +63,7 @@
                                     {
                                         $(".main").append('<div class="lists">\
                                         <ul>\
-                                        <li class="app-item link" data-href="#" data-sid="77208" data-asin="">\
+                                        <li class="app-item link" data-href="#" data-id="'+item4.AppID+'" data-asin="">\
                                         <div class="list-img">\
                                         <img src="/public/static/images/'+item4.Pic+'" alt=""></div>\
                                         <div class="list-cont">\
@@ -85,7 +85,12 @@
                                         </div>\
                                         </li>\
                                         </ul>\
-                                        </div>')
+                                        </div>');
+                                        $(document).on("click", ".link", function (e) {
+                                            e.preventDefault();
+                                            var iD=$(this).attr('data-id');
+                                            window.location.href='{:url("Index/detail")}?id='+ iD ;
+                                        });
                                     }
                                 })//item4循环结束；
                             });//item3循环
