@@ -1,0 +1,7 @@
+0.   'status' : "0", 'info' : "Login failed, password error"     密码错误
+1.   'status' : "1", 'info' : "Login success!"         登陆成功
+1.   'status' : "1", 'info' : "Register success!"         注册成功
+9.   'status' : "9", 'info' : "Database operation error!"   数据库操作出错
+10.  'status' : "10", 'info' : "Operation failed! Did not submit data!"      操作失败，未提交数据
+20.  'status' : "20", 'info' : "The user name has been registered!"          注册失败，用户名已被注册
+30.  'status' : "30", 'info' : "Password format error!"              密码格式错误
