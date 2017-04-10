@@ -1,0 +1,25 @@
+@import url(base.css);
+/**/
+.tit { display: -webkit-box; padding: 0 11px; height: 25px; line-height: 25px; border-bottom: 1px solid #dadcdc; background-color: #ebebeb; font-size: 14px; color: #999;}
+.tit h2 { -webkit-box-flex:1; font-weight: normal;}
+/**/
+.lists ul li .list-img { padding-top: 0;}
+.lt-c-tit { margin-bottom: 5px; padding-top: 3px;}
+.lt-c-s-n { margin-bottom: 0;}
+/**/
+.dl-btn {  padding-top: 2px;}
+
+.catogary .pin {top:37px;}
+
+
+
+
+
+
+
+
+
+
+
+
+

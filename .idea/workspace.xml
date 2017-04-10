@@ -2,8 +2,106 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f63b232e-8ce7-4f93-8b2d-478f2c8912e1" name="Default" comment="后期修改">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/错误代码.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/arr_more.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/image_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/logo_0413.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01042f6cddc33303d9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01081c25e9e9ae17a6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t010b5b750a2ac1e1b0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t010c557044b2a487cd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t010d4514b183116fed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0110b438084895ba0b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0111b439dafbf39403.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0114c1815726082b1b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t011a477224a1bca7c0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t011cfe40ab6b7abd9d.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t011e1f10a889dec29f.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01264dc4e907fd00d1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t012fe379a7a23113ab.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0135792c7e8b59cb04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t013bc3f67166d07ef1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t013d31024ae54d9c35.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t013ddf12f07c35c724.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0142653d354de84c95.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01462cf7b991326f0c.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0148544067be7fcaa3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t014da86e979434fb78.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t014ffede18173368f7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0152f90c8791d3f5c5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t015402489b3481dad1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t015706d05a8c20b8f5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t015af3ca48d90f0704.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0162b60b4f78d955c7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0168f384a0b6a971c2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01691f0c55ff91bf27.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01698cdb68e47d4350.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t016c449dc6c291578e.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t016d166272d40915bd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0172e83ffd566f11a1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01789ac02b9792d06f.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0178f4940163b7d350.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t017ce42c806b8dc439.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t018419b8cef539243e.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0189ca2b41ea5042ab.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t018aa6335f070f6a49.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t018c544997e683dd66.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t018edd73b73f7da681.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0191d076a471d75576.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0195c388fa6a9d07bc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t0195c3cdd3ed72e346.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01988a29ab6457d5fe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01988ef68500e30ccb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t019de8a054e8afc967.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01ad23de6df7b311f9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01b2be11d6f60cefe0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01b3fe8a58a8000258.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01b4c6546b412a2b1a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01b64df3bc5a5fa36b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01b792441769dbca78.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01c00e87bf60de4a6a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01c4facaeb36f0c919.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01c5f4e0b4ad49066d.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01c9545991ef726aad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01cc3ac175e8622865.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01ce44d47d6ad07fee.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01cfc3262e0384fa09.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01d0e3b41d88628a32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01d1c7d4ac71edf9bf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01d3d02d4e311693d5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01d499a1e914cb7419.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01dcf796a9a2452a47.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01ddbe317c4b8c1721.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01df723cc4ca5942b5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01e08b11d2ce0d8c2c.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01ed8a981e93c0dd66.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01eda05d5e89b3062d.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01ee42f94a418cd4e7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01eecbb7e5b66b59a0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01eef385abfefa5fac.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01f192410981c3dc0b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01f5a798a214cc9dcd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01f77e15cfb917a802.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01f8a9727a98c7ac0a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01fd207d7423e07225.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/t01fed80e846c3cc937.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/video_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/images/wenda_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/classify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/details.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/css/necessary.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/127.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/45.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/45be3c09c978b362.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/a839ec0ad22b001b.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/jquery-3.1.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/jquery.more.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/record.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/js/swipeview.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/static/.gitignore" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,7 +127,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/view/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="114" column="70" selection-start-line="114" selection-start-column="70" selection-end-line="114" selection-end-column="70" />
               <folding>
                 <marker date="1489721758002" expanded="true" signature="4897:5921" placeholder="..." />
@@ -245,6 +343,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thinkphp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -375,7 +519,13 @@
       <option name="project" value="LOCAL" />
       <updated>1489756551974</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="后期修改">
+      <created>1491822396236</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1491822396236</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -390,6 +540,7 @@
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -399,7 +550,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -440,13 +590,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/index/view/Category/category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/Detail/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
