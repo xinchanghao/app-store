@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>appstore-分类</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
-    <link href="/public/static/css/classify.css" rel="stylesheet"></head>
+    <link href="<?php echo config('view_replace_str.__STATIC__')?>/css/classify.css" rel="stylesheet"></head>
 
 <body>
 <div id="warpper">
@@ -27,7 +27,7 @@
                     {volist name="cate" id="vo"}
                         <li data-href="#" class="link link_0" data-id="{$vo.CategoryID}">
                             <div class="classify-img">
-                                <img src="/public/static/images/{$vo.Pic}" alt=""></div>
+                                <img src="<?php echo config('view_replace_str.__STATIC__')?>/images/{$vo.Pic}" alt=""></div>
                             <div class="classify-cont">
                                 <h2>
                                     <span>{$vo.CategoryName}</span>

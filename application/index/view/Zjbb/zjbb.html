@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>appstore-必备</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link href="/public/static/css/necessary.css" rel="stylesheet"></head>
+    <link href="<?php echo config('view_replace_str.__STATIC__')?>/css/necessary.css" rel="stylesheet"></head>
 
 <body>
 <div id="warpper">
@@ -65,7 +65,7 @@
                                         <ul>\
                                         <li class="app-item link" data-href="#" data-id="'+item4.AppID+'" data-asin="">\
                                         <div class="list-img">\
-                                        <img src="/public/static/images/'+item4.Pic+'" alt=""></div>\
+                                        <img src="<?php echo config("view_replace_str.__STATIC__")?>/images/'+item4.Pic+'" alt=""></div>\
                                         <div class="list-cont">\
                                         <div class="lt-c-tit">\
                                         <h2>\

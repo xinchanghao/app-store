@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
     <title>appstore-首页</title>
-    <link rel="stylesheet" href="/public/static/css/index.css">
+    <link rel="stylesheet" href="<?php echo config('view_replace_str.__STATIC__')?>/css/index.css">
 
 </head>
 
@@ -36,7 +36,7 @@
                     {volist name="apps" id="vo"}
                     <li class="app-item link" data-id="{$vo.AppID}">
                         <div class="list-img">
-                            <img src="/public/static/images/{$vo.Pic}" alt=""></div>
+                            <img src="<?php echo config('view_replace_str.__STATIC__')?>/images/{$vo.Pic}" alt=""></div>
                         <div class="list-cont">
                             <div class="lt-c-tit">
                                 <h2>
@@ -71,7 +71,7 @@
                 <ul>
                     <li class="single_item app-item link">
                         <div class="list-img">
-                            <img src="/public/static/images/{$vo.Pic}" alt=""></div>
+                            <img src="<?php echo config('view_replace_str.__STATIC__')?>/images/{$vo.Pic}" alt=""></div>
                         <div class="list-cont">
                             <div class="lt-c-tit">
                                 <h2>
@@ -117,7 +117,7 @@
                     $.each(res['result'], function(i, item) {
                         _this.append('<li class="app-item link" data-id="'+item.AppID+'">\
                             <div class="list-img">\
-                            <img src="/public/static/images/'+item.Pic+'"alt=""/></div>\
+                            <img src="<?php echo config("view_replace_str.__STATIC__")?>/images/'+item.Pic+'"alt=""/></div>\
                             <div class="list-cont">\
                             <div class="lt-c-tit">\
                             <h2>\
